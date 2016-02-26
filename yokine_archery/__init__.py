@@ -21,6 +21,10 @@ def index():
 def news():
     return render_template('news.html')
     
+@app.route('/media')
+def media():
+    return render_template('media.html')
+    
 if __name__ == "__main__":
     port = int(os.getenv('PORT','8080'))
     host = os.getenv('IP', '0.0.0.0')
