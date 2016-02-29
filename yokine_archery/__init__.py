@@ -25,6 +25,14 @@ def news():
 def media():
     return render_template('media.html')
     
+@app.route('/location')
+def location():
+    return render_template('location.html')
+    
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+    
 if __name__ == "__main__":
     port = int(os.getenv('PORT','8080'))
     host = os.getenv('IP', '0.0.0.0')

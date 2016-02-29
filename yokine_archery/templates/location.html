@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+<!--<head>-->
+  {% block title %}Location >--> Yokine Archery{% endblock %}
+<!--</head>-->
+<!--<body>-->
+  <!--<div id="page">-->
+    <!--<div id="container">-->
+      <!--<div id="content">-->
+        {% block content %}
+        <div class="centerwrapper" style="padding: 10px 0;">
+          <img alt="Yokine Archery Club logo" src="{{url_for('static', filename='YACnew.jpg')}}"/>
+        </div>
+        <p class="reminder">Website is currently in development, shouldn't be too much longer!</p>
+        <h2>Where to find us</h2>
+        <p>
+          Yokine Primary School
+        </p>
+        <p>
+          39 Woodrow Ave
+        </p>
+        <p>
+          Yokine, WA 6060
+        </p>
+        <p>
+          Postal Address: 11 Alexander Drive, Menora WA 6050
+        </p>
+        <p>
+          E-mail: yokinearcheryclub@gmail.com
+        </p>
+        {% endblock %}
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</body>-->
