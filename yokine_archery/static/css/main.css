@@ -28,8 +28,9 @@ html, body {
   color: #DDDDFF;
   margin: 0 auto auto 0;
   width: inherit;
-  height: 95px;
-  border-bottom: #008 15px solid;
+  height: 90px;
+  border-bottom: #008 10px solid;
+  box-shadow: 0 8px 5px #6D6D9F;
 }
 
 #heading>h1 {

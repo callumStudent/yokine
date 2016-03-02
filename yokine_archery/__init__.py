@@ -33,6 +33,11 @@ def location():
 def contact():
     return render_template('contact.html')
     
+@app.route('/submit', methods=['POST'])
+def submit():
+    if(request.method == 'POST'):
+        return render_template()
+    
 if __name__ == "__main__":
     port = int(os.getenv('PORT','8080'))
     host = os.getenv('IP', '0.0.0.0')
