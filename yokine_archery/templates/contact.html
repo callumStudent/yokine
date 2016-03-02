@@ -4,14 +4,18 @@
   {% block javascript %}
   <script>
     $(document).ready( function() {
-      $("form select").change(function() {
+      $("form select[name='about']").change(function() {
         var value = $(this).val();
         if(value == 1) {
           $("#form-size").addClass("hide");
           $("#form-age").addClass("hide");
+          $("#form-help").addClass("hide");
+          $("info-label").text("Inquiry");
         } else {
           $("#form-size").removeClass("hide");
           $("#form-age").removeClass("hide");
+          $("#form-help").removeClass("hide");
+          $("#form-label-info").text("Additional Information");
         }
       })
     });
@@ -120,12 +124,41 @@
                     </select>
                   </td>
                 </tr>
-                <tr id="form-size" class="hide">
+                <tr>
+                  <td colspan="2">
+                    <h4 name="form-name">Contact Details</h4>
+                  </td>
+                </tr>
+                <tr id="form-first">
                   <td>
-                    <label for="size">Number of people:</label>
+                    <label for="form-first-name" class="sub-section">First Name:</label>
                   </td>
                   <td>
-                    <select name="size">
+                    <input type="text" name="form-first-name"></text>
+                  </td>
+                </tr>
+                <tr id="form-last-name">
+                  <td>
+                    <label for="form-last-name" class="sub-section">Last Name:</label>
+                  </td>
+                  <td>
+                    <input type="text" name="form-last-name"></text>
+                  </td>
+                </tr>
+                <tr id="form-email">
+                  <td>
+                    <label for="form-email" class="sub-section">Email Address:</label>
+                  </td>
+                  <td>
+                    <input type="text" name="form-email"></text>
+                  </td>
+                </tr>
+                <tr id="form-size" class="hide">
+                  <td>
+                    <label for="size" class="sub-section">Number of people:</label>
+                  </td>
+                  <td>
+                    <select name="size" style="width: 50px;">
                       <option value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
@@ -136,14 +169,23 @@
                   </td>
                 </tr>
                 <tr id="form-age" class="hide">
-                  <td colspan="2">
-                    <label for="age">Is everyone above 10 years of age?</label>
+                  <td>
+                    <label for="age" class="sub-section">Is everyone above 10 years of age?</label>
+                  </td>
+                  <td>
                     <input type="checkbox" name="age" value="yes" style="float: right;"/>
                   </td>
                 </tr>
                 <tr>
-                  <td>
-                    <label for="info">Information</label>
+                  <td colspan="2">
+                    <h4 id="form-label-info">Inquiry</h4>
+                  </td>
+                </tr>
+                <tr id="form-help" class="hide">
+                  <td colspan="2">
+                    This includes previous shooting experience and personal archery 
+                    equipment, disabilities, as well as any other details you feel 
+                    might be helpful for us to know.
                   </td>
                 </tr>
                 <tr>
