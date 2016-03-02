@@ -12,6 +12,16 @@
   <!-- Javascript -->
   <script src="{{url_for('static', filename='js/jquery-2.1.4.min.js')}}"></script><!--jQuery-->
   <script src="{{url_for('static', filename='bootstrap/js/bootstrap.min.js')}}"></script><!--Bootstrap-->
+  <script>
+    $(document).ready(function () {
+      $('nav>ul>li').removeClass('active');
+      $('nav>ul>li a').each(function() {
+        if ($(this).attr('name') == location.href.split("/").slice(-1)){ $(this).addClass('current_page'); }
+      });
+    });
+  </script>
+  {% block javascript %}
+  {% endblock %}
 </head>
 <body>
   <div id="page-wrap">
@@ -19,12 +29,12 @@
       <h1><a class="link-no-decoration" href="{{url_for('index')}}">Yokine Archery Club</a></h1>
       <nav>
         <ul>
-          <li><a href="{{url_for('news')}}">News</a></li>
-          <li><a href="">Shooting</a></li>
-          <li><a href="">Calendar</a></li>
-          <li><a href="{{url_for('media')}}">Media</a></li>
-          <li><a href="{{url_for('location')}}">Location</a></li>
-          <li><a href="{{url_for('contact')}}">About/Contact</a></li>
+          <li><a name="news" href="{{url_for('news')}}">News</a></li>
+          <li><a name="shooting" href="">Shooting</a></li>
+          <li><a name="calendar" href="">Calendar</a></li>
+          <li><a name="media" href="{{url_for('media')}}">Media</a></li>
+          <li><a name="location" href="{{url_for('location')}}">Location</a></li>
+          <li><a name="contact" href="{{url_for('contact')}}">About/Contact</a></li>
         </ul>
       </nav>
       <svg id="yokine-stripe" width="180" height="80">

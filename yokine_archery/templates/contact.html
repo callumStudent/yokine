@@ -1,6 +1,22 @@
 {% extends "base.html" %}
 <!--<head>-->
   {% block title %}Location >--> Yokine Archery{% endblock %}
+  {% block javascript %}
+  <script>
+    $(document).ready( function() {
+      $("form select").change(function() {
+        var value = $(this).val();
+        if(value == 1) {
+          $("#form-size").addClass("hide");
+          $("#form-age").addClass("hide");
+        } else {
+          $("#form-size").removeClass("hide");
+          $("#form-age").removeClass("hide");
+        }
+      })
+    });
+  </script>
+  {% endblock %}
 <!--</head>-->
 <!--<body>-->
   <!--<div id="page">-->
@@ -98,19 +114,41 @@
                   </td>
                   <td>
                     <select name="about">
-                      <option>test</option>
-                      <option>test2</option>
+                      <option value="1">General inquiry</option>
+                      <option value="2">Come&Try</option>
+                      <option value="3">Beginner's course</option>
                     </select>
+                  </td>
+                </tr>
+                <tr id="form-size" class="hide">
+                  <td>
+                    <label for="size">Number of people:</label>
+                  </td>
+                  <td>
+                    <select name="size">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6+</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr id="form-age" class="hide">
+                  <td colspan="2">
+                    <label for="age">Is everyone above 10 years of age?</label>
+                    <input type="checkbox" name="age" value="yes" style="float: right;"/>
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    <label for="information">Information</label>
+                    <label for="info">Information</label>
                   </td>
                 </tr>
                 <tr>
                   <td colspan="2">
-                    <textarea name="information" cols="45" rows="5"></textarea>
+                    <textarea name="info" cols="45" rows="5"></textarea>
                   </td>
                 </tr>
                 <tr>

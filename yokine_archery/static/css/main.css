@@ -57,8 +57,6 @@ nav {
 
 nav>ul>li {
   display: inline;
-  padding: 3px;
-  margin-right: 3px;
   color: #65AAE7;
   font: 21px Arial, Helvetica, sans-serif;
   font-weight: bold;
@@ -67,12 +65,26 @@ nav>ul>li {
 nav a {
   text-decoration: none;
   color: #759AE7;
-  padding: 5px;
+  padding: 8px;
 }
 
 nav a:hover {
   color: white;
-  text-decoration: none;
+}
+
+nav a:active, nav a:visited, nav a:hover {
+  text-decoration: none !important;
+}
+
+.current_page {
+  background: #FFF;
+  color: #00A;
+  border: #00A 2px solid;
+  border-radius: 3px;
+}
+
+.current_page:hover {
+  color: #759AE7;
 }
 
 #yokine-stripe {
@@ -138,6 +150,10 @@ footer>ul>li {
   color: red;
   font-size: 13px;
   text-align: center;
+}
+
+.hide {
+  display: none;
 }
 
 /** About/Contact  page **/
