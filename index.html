@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+<!--<head>-->
+  {% block title %}Yokine Archery >>-->{% endblock %}
+<!--</head>-->
+<!--<body>-->
+  <!--<div id="page">-->
+    <!--<div id="container">-->
+      <!--<div id="content">-->
+        {% block content %}
+        <h2 id="welcome">Welcome to Yokine Archery Club Inc.</h2>
+        <div class="centerwrapper" style="padding: 10px 0;">
+          <img alt="Yokine Archery Club logo" src="{{url_for('static', filename='YACnew.jpg')}}"/>
+        </div>
+        <p class="reminder">Website is currently in development, shouldn't be too much longer!</p>
+        <p>
+          Archery is officially Australia's fastest growing sport, and we at
+          Yokine Archery take great pride in our competition achievements!
+        </p>
+        <p>
+          Yokine Archery is located on the grounds of Yokine Primary School,
+          39 Woodrow Ave, Yokine, Western Australia.
+        </p>
+        <p>
+          We offer weekly 'Come &amp; Try' events (Sundays) and regular Beginners
+           and Advanced courses for those who would like to learn more.
+        </p>
+        <p class="reminder">
+          Special information regarding Come and Try sessions will be posted here.
+        </p>
+        <p>
+          We specialise in recurve archery development and give membership
+          preference to competitive archers who want to excel (see membership
+          policy under Documents and Forms).
+        </p>
+        <p>
+          If you're interested in archery, we'd be interested in hearing from you!
+        </p>
+        <div>
+          <img class="img-center" alt="Yokine archers on the line"
+          src="{{url_for('static', filename='P1000156-800px.jpg')}}"/>
+        </div>
+        {% endblock %}
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</body>-->
