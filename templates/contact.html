@@ -1,0 +1,229 @@
+{% extends "base.html" %}
+<!--<head>-->
+  {% block title %}Location >--> Yokine Archery{% endblock %}
+  {% block javascript %}
+  <script>
+    $(document).ready( function() {
+      $("form select[name='about']").change(function() {
+        var value = $(this).val();
+        if(value == 1) {
+          $("#form-size").addClass("hide");
+          $("#form-age").addClass("hide");
+          $("#form-help").addClass("hide");
+          $("info-label").text("Inquiry");
+        } else {
+          $("#form-size").removeClass("hide");
+          $("#form-age").removeClass("hide");
+          $("#form-help").removeClass("hide");
+          $("#form-label-info").text("Additional Information");
+        }
+      })
+    });
+  </script>
+  {% endblock %}
+<!--</head>-->
+<!--<body>-->
+  <!--<div id="page">-->
+    <!--<div id="container">-->
+      <!--<div id="content">-->
+        {% block content %}
+        <div class="centerwrapper" style="padding: 10px 0;">
+          <img alt="Yokine Archery Club logo" src="{{url_for('static', filename='YACnew.jpg')}}"/>
+        </div>
+        <p class="reminder">Website is currently in development, shouldn't be too much longer!</p>
+        <div style="display: table-row">
+        <div style="display: table-cell;width: 420px;">
+          <h2>About us</h2>
+          <p>
+            For nearly 40 years, Yokine Archery has provided a safe, fun and 
+            relaxing environment for people of all ages to enjoy the wonderful sport of archery.
+          </p>
+          <p>
+            Over the past decade, the focus of the club has shifted to developing 
+            youth archers as the next generation of state, national and world champions.
+          </p>
+          <p>
+            While we continue to support social members, our training focus will 
+            be on young archers (10-25) or adults who want to actively compete. 
+            As the program takes only its first steps, Yokine Archery members already 
+            comprise over 50% of the state youth team (recurve) and the club boasts 
+            two each of both male and female recurve archers in Australia’s top ten. 
+            Not bad for under 25s and one of Australia’s smallest clubs!
+          </p>
+          <p>
+            Our club is unique in providing regular, high level training and 
+            coaching. We have regular guest speakers in fields such as sport 
+            physiotherapy, sport psychology, biomechanics, and nutrition. We conduct 
+            not only coaching sessions, but physical fitness training and we organise 
+            high level training and friendly competitions with our Asian partners.
+          </p>
+          
+          <h2>History</h2>
+          <p>
+            Yokine Archery Club was formed on the 29th June 1975 from a meeting 
+            at the Yokine Primary School.  An informal training group had previously 
+            existed and Syd Alman suggested a club be formed.  Syd Alman was the 
+            first President, Judy Pearson was the first Secretary, Moira Missen 
+            the First Treasurer and Maurice Alman the first Field Captain.
+          <p>
+            It has moved location several times. In the beginning the club had 
+            a storage shed close to where the primary School buildings are now 
+            and shot South to North, then the premises were extended with a government 
+            grant to allow for the purchase of a tin garage. This was moved short 
+            distances a number of times and finally located on the south west side 
+            of the primary school where a concrete pad was laid and the shed 
+            enlarged to provide club rooms.
+          </p>
+          <p>
+            In 1979 the Nationals were held on a reserve in Yokine and practice 
+            was carried out at Yokine Club grounds.
+          </p>
+          <p>
+            For a brief period after the International Shooting Complex was built, 
+            Yokine moved there to support the cost of the complex. This was less 
+            than satisfactory for club members so it was then returned to the 
+            Yokine Primary School.
+          </p>
+          <p>
+            In the early 1990's the Club house was moved closer to the west side
+            of the school oval when the block of land (owned by the school) on 
+            which it was located was intended to be sold. This did not eventuate 
+            but the club house had already been moved. The club is now situated 
+            in the middle of well grassed grounds with native trees, banksias and 
+            tuarts surrounding it.  Electricity was connected at about this time.
+          </p>
+          <table>
+            <tr>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+        <div style="display: table-cell;width: 80px;"></div>
+        <div id="contact-container" style="display: table-cell">
+          <h2>Contact</h2>
+            <p>
+              You can contact us through our facebook page. Just click on the link 
+              or search for Yokine Archery Club. Don't forget to click the <strong>like</strong>
+              button.
+            </p>
+            <p>
+              You can also contact us via the following form:
+            </p>
+            
+            <form id="contact-form" name="contact" method="POST" action="">
+              <table>
+                <tr>
+                  <td>
+                    <label for="about">Contacting about:</label>
+                  </td>
+                  <td>
+                    <select name="about">
+                      <option value="1">General inquiry</option>
+                      <option value="2">Come&Try</option>
+                      <option value="3">Beginner's course</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <h4 name="form-name">Contact Details</h4>
+                  </td>
+                </tr>
+                <tr id="form-first">
+                  <td>
+                    <label for="form-first-name" class="sub-section">First Name:</label>
+                  </td>
+                  <td>
+                    <input type="text" name="form-first-name"></text>
+                  </td>
+                </tr>
+                <tr id="form-last-name">
+                  <td>
+                    <label for="form-last-name" class="sub-section">Last Name:</label>
+                  </td>
+                  <td>
+                    <input type="text" name="form-last-name"></text>
+                  </td>
+                </tr>
+                <tr id="form-email">
+                  <td>
+                    <label for="form-email" class="sub-section">Email Address:</label>
+                  </td>
+                  <td>
+                    <input type="text" name="form-email"></text>
+                  </td>
+                </tr>
+                <tr id="form-size" class="hide">
+                  <td>
+                    <label for="size" class="sub-section">Number of people:</label>
+                  </td>
+                  <td>
+                    <select name="size" style="width: 50px;">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6+</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr id="form-age" class="hide">
+                  <td>
+                    <label for="age" class="sub-section">Is everyone above 10 years of age?</label>
+                  </td>
+                  <td>
+                    <input type="checkbox" name="age" value="yes" style="float: right;"/>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <h4 id="form-label-info">Inquiry</h4>
+                  </td>
+                </tr>
+                <tr id="form-help" class="hide">
+                  <td colspan="2">
+                    This includes previous shooting experience and personal archery 
+                    equipment, disabilities, as well as any other details you feel 
+                    might be helpful for us to know.
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <textarea id="info" name="info"></textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <button type="submit">Submit</button>
+                  </td>
+                </tr>
+              </table>
+            </form>
+          
+            <p>
+              Or by using the email and post details below:
+            </p>
+          
+            <table>
+              <tr>
+                <td><strong>Email:</strong></td>
+                <td>yokinearcheryclub@gmail.com</td>
+              </tr>
+              <tr>
+                <td><strong>Post:</strong></td>
+                <td>11 Alexander Drive</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Menora, 6050, Perth WA</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        {% endblock %}
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</body>-->
