@@ -1,15 +1,30 @@
 {% extends "base.html" %}
 <!--<head>-->
   {% block title %}Yokine Archery >>-->{% endblock %}
+  {% block javascript%}
+  <script>
+        $( window ).resize( function() {
+            if( $( window ).width() < 860) {
+                $( '#news' ).addClass('hide');
+                $( '.main > h2' ).addClass('news-hide');
+                $( '.main > p' ).addClass('news-hide');
+            } else {
+                $( '#news' ).removeClass('hide');
+                $( '.main > h2' ).removeClass('news-hide');
+                $( '.main > p' ).removeClass('news-hide');
+            }
+        })
+  </script>
+  {% endblock %}
 <!--</head>-->
 <!--<body>-->
   <!--<div id="page">-->
     <!--<div id="container">-->
       <!--<div id="content">-->
         {% block content %}
-         <div class="main-left">
+        <div class="main">
             <h2 id="welcome">Welcome to Yokine Archery Club Inc.</h2>
-            <div class="centerwrapper" style="padding: 10px 0;">
+            <div class="centerwrapper">
               <img alt="Yokine Archery Club logo" src="{{url_for('static', filename='YACnew.jpg')}}"/>
             </div>
             <p class="reminder">Website is currently in development, shouldn't be too much longer!</p>
@@ -36,8 +51,8 @@
             <p>
               If you're interested in archery, we'd be interested in hearing from you!
             </p>
-            <div style="margin-top: 50px;">
-              <img class="img-center" alt="Yokine archers on the line"
+            <div class="centerwrapper" style="margin-top: 15px">
+              <img alt="Yokine archers on the line"
               src="{{url_for('static', filename='P1000156-800px.jpg')}}"/>
             </div>
         </div>

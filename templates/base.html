@@ -37,11 +37,13 @@
           <li><a name="contact" href="{{url_for('contact')}}">About/Contact</a></li>
         </ul>
       </nav>
-      <svg id="yokine-stripe" width="180" height="80">
-        <line x1="30" y1="95" x2="120" y2="-15" style="stroke:rgb(255,255,255);stroke-width:30;" />
-        <line x1="68" y1="95" x2="158" y2="-15" style="stroke:rgb(255,0,0);stroke-width:30;" />
-        Sorry, your browser does not support inline SVG.
-      </svg>
+      <div id="yokine-stripe">
+        <svg id="yokine-stripe-svg" width="180" height="80">
+            <line x1="30" y1="95" x2="120" y2="-15" style="stroke:rgb(255,255,255);stroke-width:30;" />
+            <line x1="68" y1="95" x2="158" y2="-15" style="stroke:rgb(255,0,0);stroke-width:30;" />
+            Sorry, your browser does not support inline SVG.
+        </svg>
+      </div>
     </div>
     <div id="content">
         {% block content %}
