@@ -38,12 +38,16 @@ html, body {
   justify-content: space-around;
 }
 
-#heading>h1 {
-  margin-left: 20px;
-  min-width: 319px;
+#heading-1 {
+    margin-top: 0;
+}
+
+#heading-1>h2 {
+  /* min-width: 319px; */
   color: white;
   font-family: Tahoma, Geneva, sans-serif;
-  flex-grow: 1;
+  /* flex-grow: 1; */
+  font-size: 2.94rem;
 }
 
 .link-no-decoration {
@@ -59,23 +63,6 @@ html, body {
 nav {
   margin-top: 25px;
   min-width: 392px;
-  flex-grow: 1;
-}
-
-nav>ul>li {
-  display: inline;
-  color: #65AAE7;
-  font: 21px Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  width: 66%;
-  min-width: 685px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #759AE7;
-  margin: 5px;
-  padding: 1px 3px;
 }
 
 nav a:hover {
@@ -107,10 +94,8 @@ nav a:active, nav a:visited, nav a:hover {
 
 #yokine-stripe-svg {
   position: absolute;
-  top: 0px;
+  top: -20px;
   right: 10px;
-  height: 80px;
-  width: 180px;
 }
 
 #content {
@@ -197,7 +182,7 @@ footer>ul>li {
 
 #news {
     position: absolute;
-    top: 120px;
+    top: 170px;
     right: 10%;
     max-width: 24%;
     min-width: 18%;

@@ -30,22 +30,24 @@
 </head>
 <body>
   <div id="page-wrap">
-    <div id="heading">
-      <h1><a class="link-no-decoration" href="{{url_for('index')}}">Yokine Archery Club</a></h1>
-      <nav>
-        <ul>
-          <li><a name="news" href="{{url_for('news')}}">News</a></li>
-          <li><a name="shooting" href="">Shooting</a></li>
-          <li><a name="calendar" href="">Calendar</a></li>
-          <li><a name="media" href="{{url_for('media')}}">Media</a></li>
-          <li><a name="location" href="{{url_for('location')}}">Location</a></li>
-          <li><a name="contact" href="{{url_for('contact')}}">About/Contact</a></li>
-        </ul>
+    <div id="heading-1" class="card-panel blue darken-4 z-depth-2 row" style="max-height: 136px;overflow-y: hidden">
+      <h2 class="col l3" style="min-width: 415px;"><a class="link-no-decoration" href="{{url_for('index')}}">Yokine Archery Club</a></h2>
+      <nav class="col l5 blue darken-3" role="navigation" style="margin-left: 20px">
+        <div class="nav-wrapper">
+          <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li><a name="news" href="{{url_for('news')}}">News</a></li>
+            <li><a name="shooting" href="">Shooting</a></li>
+            <li><a name="calendar" href="">Calendar</a></li>
+            <li><a name="media" href="{{url_for('media')}}">Media</a></li>
+            <li><a name="location" href="{{url_for('location')}}">Location</a></li>
+            <li><a name="contact" href="{{url_for('contact')}}">About/Contact</a></li>
+          </ul>
+        </div>
       </nav>
-      <div id="yokine-stripe">
-        <svg id="yokine-stripe-svg" width="180" height="80">
-            <line x1="30" y1="95" x2="120" y2="-15" style="stroke:rgb(255,255,255);stroke-width:30;" />
-            <line x1="68" y1="95" x2="158" y2="-15" style="stroke:rgb(255,0,0);stroke-width:30;" />
+      <div class="col l1 right" style="position: relative">
+        <svg id="yokine-stripe-svg" width="180px">
+            <line x1="20" y1="115%" x2="130" y2="-15%" style="stroke:rgb(255,255,255);stroke-width:30;" />
+            <line x1="58" y1="115%" x2="168" y2="-15%" style="stroke:rgb(255,0,0);stroke-width:30;" />
             Sorry, your browser does not support inline SVG.
         </svg>
       </div>
