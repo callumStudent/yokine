@@ -6,12 +6,17 @@
   <meta name="description" content="All your your archery information from Yokine Archery">
   <meta name="author" content="Callum Ingley">
   <title>{% block title %}{% endblock %}</title>
+
   <!-- Style sheets -->
   <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}"><!--Base sheet -->
   <link rel="stylesheet" href="{{url_for('static', filename='bootstrap/css/bootstrap.css')}}"><!--Bootstrap-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css"><!--Materialize-->
+
   <!-- Javascript -->
   <script src="{{url_for('static', filename='js/jquery-2.1.4.min.js')}}"></script><!--jQuery-->
   <script src="{{url_for('static', filename='bootstrap/js/bootstrap.min.js')}}"></script><!--Bootstrap-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script><!--Materialize-->
+
   <script>
     $(document).ready(function () {
       $('nav>ul>li').removeClass('active');

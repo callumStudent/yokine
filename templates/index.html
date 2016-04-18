@@ -4,7 +4,7 @@
   {% block javascript%}
   <script>
         $( window ).resize( function() {
-            if( $( window ).width() < 860) {
+            if( $( window ).width() < 990) {
                 $( '#news' ).addClass('hide');
                 $( '.main > h2' ).addClass('news-hide');
                 $( '.main > p' ).addClass('news-hide');
@@ -24,7 +24,7 @@
         {% block content %}
         <div class="main">
             <h2 id="welcome">Welcome to Yokine Archery Club Inc.</h2>
-            <div class="centerwrapper">
+            <div class="centerwrapper" style="max-width: 750px">
               <img alt="Yokine Archery Club logo" src="{{url_for('static', filename='YACnew.jpg')}}"/>
             </div>
             <p class="reminder">Website is currently in development, shouldn't be too much longer!</p>
@@ -51,10 +51,9 @@
             <p>
               If you're interested in archery, we'd be interested in hearing from you!
             </p>
-            <div class="centerwrapper" style="margin-top: 15px">
-              <img alt="Yokine archers on the line"
-              src="{{url_for('static', filename='P1000156-800px.jpg')}}"/>
-            </div>
+            <img alt="Yokine archers on the line"
+                src="{{url_for('static', filename='P1000156-800px.jpg')}}"
+                style="height: auto; width: 100%; max-height: 335px; max-width: 750px; margin-top: 20px; margin-left: -2%;" />
         </div>
         <div id="news">
             <h2>
