@@ -19,7 +19,7 @@ html, body {
 
 #heading {
     margin-top: -1px;
-    min-width: 341px;
+    min-width: 378px;
     height: 125px;
     min-height: 125px;
 }
@@ -33,9 +33,9 @@ html, body {
 }
 
 .logo-small {
-    font-size: 1.6em !important;
+    font-size: 1.9em !important;
     min-width: 219px !important;
-    margin-top: 35px;
+    margin-top: 40px;
 }
 
 .link-no-decoration {
@@ -140,7 +140,8 @@ footer>ul>li {
 .reminder {
   color: red;
   font-size: 13px;
-  text-align: center;
+  text-align: center !important;
+  padding: 10px 0;
 }
 
 .hide {
@@ -152,7 +153,12 @@ footer>ul>li {
 }
 
 /** Index page **/
-.main {
+#welcome p {
+    font-size: 18px;
+    text-align: left;
+}
+
+/*.main {
     max-width: 820px;
     min-width: 24%;
     margin-right: 27%;
@@ -168,7 +174,7 @@ footer>ul>li {
 .main > p {
     font: 18px Arial, Helvetica, sans-serif;
     padding: 5px 0;
-}
+}*/
 
 .news-hide {
     margin-right: auto !important;

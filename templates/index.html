@@ -4,7 +4,7 @@
   {% block javascript%}
   <script>
     function windowSizeIndex() {
-      if( $( window ).width() < 990) {
+      if( $( window ).width() < 1218) {
         $( '#news' ).addClass('hide');
         $( '.main > h2' ).addClass('news-hide');
         $( '.main > p' ).addClass('news-hide');
@@ -29,8 +29,10 @@
   <!--<div id="page">-->
       <!--<div id="content">-->
         {% block content %}
-        <div class="main">
-            <h2 id="welcome">Welcome to Yokine Archery Club Inc.</h2>
+        <div class="row">
+          <div class="col l2" style="height: 1px"></div>
+          <div id="welcome" class="col l6">
+            <h3 id="welcome">Welcome to Yokine Archery Club Inc.</h3>
             <div class="centerwrapper" style="max-width: 750px">
               <img alt="Yokine Archery Club logo" src="{{url_for('static', filename='YACnew.jpg')}}"/>
             </div>
@@ -45,7 +47,7 @@
             </p>
             <p>
               We offer weekly 'Come &amp; Try' events (Sundays) and regular Beginners
-               and Advanced courses for those who would like to learn more.
+              and Advanced courses for those who would like to learn more.
             </p>
             <p class="reminder">
               Special information regarding Come and Try sessions will be posted here.
@@ -61,6 +63,8 @@
             <img alt="Yokine archers on the line"
                 src="{{url_for('static', filename='P1000156-800px.jpg')}}"
                 style="height: auto; width: 100%; max-height: 335px; max-width: 750px; margin-top: 20px; margin-left: -2%;" />
+          </div>
+          <div class="col l4" style="height: 1px"></div>
         </div>
         <div id="news"class="card-panel grey lighten-3 accent-2 z-depth-2">
             <div class="card-content">
