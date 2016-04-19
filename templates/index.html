@@ -3,23 +3,30 @@
   {% block title %}Yokine Archery >>-->{% endblock %}
   {% block javascript%}
   <script>
-        $( window ).resize( function() {
-            if( $( window ).width() < 990) {
-                $( '#news' ).addClass('hide');
-                $( '.main > h2' ).addClass('news-hide');
-                $( '.main > p' ).addClass('news-hide');
-            } else {
-                $( '#news' ).removeClass('hide');
-                $( '.main > h2' ).removeClass('news-hide');
-                $( '.main > p' ).removeClass('news-hide');
-            }
-        })
+    function windowSizeIndex() {
+      if( $( window ).width() < 990) {
+        $( '#news' ).addClass('hide');
+        $( '.main > h2' ).addClass('news-hide');
+        $( '.main > p' ).addClass('news-hide');
+      } else {
+        $( '#news' ).removeClass('hide');
+        $( '.main > h2' ).removeClass('news-hide');
+        $( '.main > p' ).removeClass('news-hide');
+      }
+    }
+
+    $( document ).ready(function() {
+        windowSizeIndex();
+    });
+
+    $( window ).resize( function() {
+        windowSizeIndex();
+    });
   </script>
   {% endblock %}
 <!--</head>-->
 <!--<body>-->
   <!--<div id="page">-->
-    <!--<div id="container">-->
       <!--<div id="content">-->
         {% block content %}
         <div class="main">
@@ -55,14 +62,13 @@
                 src="{{url_for('static', filename='P1000156-800px.jpg')}}"
                 style="height: auto; width: 100%; max-height: 335px; max-width: 750px; margin-top: 20px; margin-left: -2%;" />
         </div>
-        <div id="news">
-            <h2>
-                Latest News
-            </h2>
-            <p>News items will appear here</p>
+        <div id="news"class="card-panel grey lighten-3 accent-2 z-depth-2">
+            <div class="card-content">
+                <h2 class="card-title">Latest News</h2>
+                <p>News items will appear here</p>
+            </div>
         </div>
         {% endblock %}
       <!--</div>-->
-    <!--</div>-->
   <!--</div>-->
 <!--</body>-->
