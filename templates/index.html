@@ -30,7 +30,7 @@
       <!--<div id="content">-->
         {% block content %}
         <div class="row">
-          <div class="col l2" style="height: 1px"></div>
+          <div class="col l2 space"></div>
           <div id="welcome" class="col l6">
             <h3 id="welcome">Welcome to Yokine Archery Club Inc.</h3>
             <div class="centerwrapper" style="max-width: 750px">
@@ -60,15 +60,16 @@
             <p>
               If you're interested in archery, we'd be interested in hearing from you!
             </p>
-            <img alt="Yokine archers on the line"
-                src="{{url_for('static', filename='P1000156-800px.jpg')}}"
-                style="height: auto; width: 100%; max-height: 335px; max-width: 750px; margin-top: 20px; margin-left: -2%;" />
+            <img
+              alt="Yokine archers on the line"
+              src="{{url_for('static', filename='P1000156-800px.jpg')}}"
+              style="height: auto; width: 100%; max-height: 335px; max-width: 750px; margin-top: 30px; margin-left: -2%;" />
           </div>
-          <div class="col l4" style="height: 1px"></div>
+          <div class="col l4 space"></div>
         </div>
-        <div id="news"class="card-panel grey lighten-3 accent-2 z-depth-2">
+        <div id="news"class="card-panel blue-grey lighten-5 z-depth-2">
             <div class="card-content">
-                <h2 class="card-title">Latest News</h2>
+                <h2 class="card-title grey-text text-darken-3">Latest News</h2>
                 <p>News items will appear here</p>
             </div>
         </div>
