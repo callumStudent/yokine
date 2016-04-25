@@ -33,8 +33,8 @@ html, body {
 }
 
 .logo-small {
-    font-size: 1.9em !important;
-    min-width: 219px !important;
+    font-size: 1.4em !important;
+    min-width: 196px !important;
     margin-top: 40px;
 }
 
@@ -50,7 +50,7 @@ html, body {
 
 nav {
   margin-top: 25px;
-  min-width: 580px;
+  min-width: 625px;
 }
 
 nav a:hover {
@@ -128,13 +128,8 @@ page-wrap:after {
   width: 100%;
 }
 
-footer>ul {
-  text-align: center;
-}
-
-footer>ul>li {
-  display: inline;
-  padding: 10px;
+.site-footer p {
+    text-align: center;
 }
 
 .reminder {
@@ -156,8 +151,24 @@ footer>ul>li {
     height: 1px;
 }
 
+.fb-icon {
+    display: inline-block;
+    height: 29px;
+    width: 29px;
+    vertical-align: middle;
+}
+
+.fb-blue {
+    background: url("../icons/FB-f-Logo__blue_29.png") no-repeat 0 0;
+}
+
+.fb-white {
+    background: url("../icons/FB-f-Logo__white_29.png") no-repeat 0 0;
+}
+
 p > strong {
     font-weight: bold;
+    display: block;
 }
 
 /** Index page **/
@@ -204,34 +215,34 @@ p > strong {
 /** News page **/
 #news-cards>.card {
     margin-top: 30px;
+    border: 2px #CCCCCC solid;
+    border-radius: 3px;
+}
+
+#media .card-content>a {
+    word-break: break-all;
+    overflow-wrap: break-word !important;
+}
+
+/** Location **/
+.map-sm {
+    height:305px;width:275px;
+}
+
+.map-med {
+    height:440px;width:450px;
+}
+
+.map-lg {
+    height:440px;
+    width:600px;
 }
 
 /** About/Contact  page **/
-#contact-container td:first-child {
-  width:140px;
+#contact-form .row {
+    margin-top: 10px !important;
 }
 
-#contact-container td:nth-child(2) {
-  width: 200px;
-  text-align: right;
-}
-#contact-container td {
-  padding-bottom: 5px;
-}
-
-#contact-container select {
-  width: 140px;
-}
-
-#contact-container table {
-  margin-bottom: 30px;
-}
-
-#info {
-  min-width: 100%;
-  height: 110px;
-}
-
-.sub-section {
-  padding-left: 10px;
+#form-age {
+    margin-bottom: 60px;
 }
