@@ -56,11 +56,11 @@
       <!--<div id="content">-->
         {% block content %}
         <div class="centerwrapper" style="padding: 10px 0;">
-          <img alt="Yokine Archery Club logo" src="{{url_for('static', filename='YACnew.jpg')}}"/>
+          <img alt="Yokine Archery Club logo" src="{{url_for('static', filename='YACnew.jpg')}}">
         </div>
         <p class="reminder">Website is currently in development, shouldn't be too much longer!</p>
         <div class="row">
-          <div class="col l4 offset-l1" style="min-width: 300px">
+          <div class="col l4 offset-l1 m12 s12" style="min-width: 300px">
             <h3>Where to find us</h3>
             <p>
               Yokine Primary School
@@ -75,9 +75,13 @@
             <p>
               E-mail: yokinearcheryclub@gmail.com
             </p>
+            <div class="centerwrapper" style="margin-top: 20px;max-width: 330px">
+              <img alt="yokine aerial view map" src="{{url_for('static', filename='Yokine-Map2.bmp')}}"
+                style="height:auto;width:100%">
+            </div>
           </div>
-          <div class="col l7">
-            <div style='overflow:hidden;height:440px;width:700px;'>
+          <div class="col l7 m12 s12">
+            <div style='margin-top:60px'>
               <div id='gmap_canvas' class="map-lg" style='margin-top: 30px'></div>
               <div>
                 <small>
