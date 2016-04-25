@@ -1,6 +1,54 @@
 {% extends "base.html" %}
 <!--<head>-->
   {% block title %}Location >--> Yokine Archery{% endblock %}
+  {% block javascript %}
+  <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+  <script type='text/javascript'>
+    function mapSize() {
+        if($( window ).width() < 494) {
+            $( "#gmap_canvas" ).addClass('map-sm');
+            $( "#gmap_canvas" ).removeClass('map-med');
+            $( "#gmap_canvas" ).removeClass('map-lg');
+        }
+        else if($( window ).width() < 668) {
+            $( "#gmap_canvas" ).removeClass('map-sm');
+            $( "#gmap_canvas" ).addClass('map-med');
+            $( "#gmap_canvas" ).removeClass('map-lg');
+        } else {
+            $( "#gmap_canvas" ).removeClass('map-sm');
+            $( "#gmap_canvas" ).removeClass('map-med');
+            $( "#gmap_canvas" ).addClass('map-lg');
+        }
+    }
+
+    function init_map(){
+      var myOptions = {
+        center:new google.maps.LatLng(-31.901065901996947,115.85934845767214),
+        zoom:15,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+      map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+      marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(-31.901065901996947,115.85934845767214)});
+      infowindow = new google.maps.InfoWindow({content:'<strong>Yokine Archery Club</strong><br>39 Woodrow Ave Yokine<br>'});
+      google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});
+      infowindow.open(map,marker);
+      map.panTo(marker.getPosition());
+    }
+
+    function centerMap() {
+        map.panTo(marker.getPosition());
+    }
+
+    google.maps.event.addDomListener(window, 'load', init_map);
+    $( document ).ready(function() {
+        mapSize();
+    });
+    $( window ).resize(function() {
+        mapSize();
+        map.panTo(marker.getPosition());
+    });
+  </script>
+  {% endblock %}
 <!--</head>-->
 <!--<body>-->
   <!--<div id="page">-->
@@ -11,22 +59,40 @@
           <img alt="Yokine Archery Club logo" src="{{url_for('static', filename='YACnew.jpg')}}"/>
         </div>
         <p class="reminder">Website is currently in development, shouldn't be too much longer!</p>
-        <h2>Where to find us</h2>
-        <p>
-          Yokine Primary School
-        </p>
-        <p>
-          39 Woodrow Ave
-        </p>
-        <p>
-          Yokine, WA 6060
-        </p>
-        <p>
-          Postal Address: 11 Alexander Drive, Menora WA 6050
-        </p>
-        <p>
-          E-mail: yokinearcheryclub@gmail.com
-        </p>
+        <div class="row">
+          <div class="col l4 offset-l1" style="min-width: 300px">
+            <h3>Where to find us</h3>
+            <p>
+              Yokine Primary School
+            </p>
+            <p>
+              39 Woodrow Ave<br>
+              Yokine, WA 6060
+            </p>
+            <p>
+              Postal Address: 11 Alexander Drive, Menora WA 6050
+            </p>
+            <p>
+              E-mail: yokinearcheryclub@gmail.com
+            </p>
+          </div>
+          <div class="col l7">
+            <div style='overflow:hidden;height:440px;width:700px;'>
+              <div id='gmap_canvas' class="map-lg" style='margin-top: 30px'></div>
+              <div>
+                <small>
+                  <a href="http://embedgooglemaps.com">
+                       									embed google maps
+                  </a>
+                </small>
+              </div>
+              <div><small><a href="http://freedirectorysubmissionsites.com/">directory submission sites</a></small></div>
+              <style>
+                #gmap_canvas img{max-width:none!important;background:none!important}
+              </style>
+            </div>
+          </div>
+        </div>
         {% endblock %}
       <!--</div>-->
     <!--</div>-->

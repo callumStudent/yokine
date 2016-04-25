@@ -9,12 +9,10 @@
 
   <!-- Style sheets -->
   <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}"><!--Base sheet -->
-  <link rel="stylesheet" href="{{url_for('static', filename='bootstrap/css/bootstrap.css')}}"><!--Bootstrap-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css"><!--Materialize-->
 
   <!-- Javascript -->
   <script src="{{url_for('static', filename='js/jquery-2.1.4.min.js')}}"></script><!--jQuery-->
-  <script src="{{url_for('static', filename='bootstrap/js/bootstrap.min.js')}}"></script><!--Bootstrap-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script><!--Materialize-->
 
   <script>
@@ -74,18 +72,28 @@
             <li><a name="news" href="{{url_for('news')}}">News</a></li>
             <li><a name="shooting" href="">Shooting</a></li>
             <li><a name="calendar" href="">Calendar</a></li>
-            <li><a name="media" href="{{url_for('media')}}">Media</a></li>
+            <li><a name="gallery" href="{{url_for('gallery')}}">Gallery</a></li>
             <li><a name="location" href="{{url_for('location')}}">Location</a></li>
             <li><a name="contact" href="{{url_for('contact')}}">About/Contact</a></li>
+            <li>
+              <a name="facebook" href="https://www.facebook.com/YokineArcheryClub/">
+                <span class="fb-icon fb-white" role="img" aria-label="facebook"></span>
+              </a>
+            </li>
           </ul>
           <ul id="slide-out" class="side-nav">
             <li><a name="home" href="{{url_for('index')}}">Home</a></li>
             <li><a name="news" href="{{url_for('news')}}">News</a></li>
             <li><a name="shooting" href="">Shooting</a></li>
             <li><a name="calendar" href="">Calendar</a></li>
-            <li><a name="media" href="{{url_for('media')}}">Media</a></li>
+            <li><a name="gallery" href="{{url_for('gallery')}}">Gallery</a></li>
             <li><a name="location" href="{{url_for('location')}}">Location</a></li>
             <li><a name="contact" href="{{url_for('contact')}}">About/Contact</a></li>
+            <li>
+              <a name="facebook" href="https://www.facebook.com/YokineArcheryClub/">
+                <span class="fb-icon fb-blue" role="img" aria-label="facebook"></span>
+              </a>
+            </li>
           </ul>
           <a id="mobile" href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
         </div>
@@ -104,10 +112,16 @@
     </div>
   </div>
   <footer class="site-footer">
-    <ul>
-      <li>&copy;Yokine Archery Club</li>
-      <li>Website made by Callum Ingley</li>
-    </ul>
+    <div class="row">
+      <div class="col l3 m1 space"></div>
+      <div class="col l6 m10 s12">
+        <p>
+          &copy;Yokine Archery Club
+          Website made by Callum Ingley
+        </p>
+      </div>
+      <div class="col l3 m1 space"></div>
+    </div>
   </footer>
 </body>
 </html>
