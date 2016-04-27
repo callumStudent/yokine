@@ -21,6 +21,10 @@ def index():
 def news():
     return render_template('news.html')
 
+@app.route('/beginners')
+def beginners():
+    return render_template('beginners.html')
+
 @app.route('/gallery')
 def gallery():
     return render_template('gallery.html')

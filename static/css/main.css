@@ -17,82 +17,11 @@ html, body {
   overflow: auto;
 }
 
-#heading {
-    margin-top: -1px;
-    min-width: 378px;
-    height: 125px;
-    min-height: 125px;
-}
-
-#logo {
-  min-width: 415px;
-  color: white;
-  font-family: Tahoma, Geneva, sans-serif;
-  /* flex-grow: 1; */
-  font-size: 2.94rem;
-}
-
-.logo-small {
-    font-size: 1.4em !important;
-    min-width: 196px !important;
-    margin-top: 40px;
-}
-
-.link-no-decoration {
-  text-decoration: none;
-  color: white;
-}
-
-.link-no-decoration:hover {
-  text-decoration: none;
-  color: white;
-}
-
-nav {
-  margin-top: 25px;
-  min-width: 625px;
-}
-
-nav a:hover {
-  color: white;
-}
-
-nav a:active, nav a:visited, nav a:hover {
-  text-decoration: none !important;
-}
-
-nav li {
-    font-weight: bold;
-}
-
-.mobile-nav {
-    height: 60px !important;
-    width: 60px !important;
-    min-width: 60px !important;
-}
-
-.current_page {
-  background: #FFF;
-  color: #00A;
-  border: #00A 2px solid;
-  border-radius: 3px;
-}
-
-.current_page:hover {
-  color: #759AE7;
-}
-
-#yokine-stripe-svg {
-  position: absolute;
-  top: -20px;
-  right: 10px;
-}
-
 #content {
   margin-left: auto;
   margin-right: auto;
   width: 85%;
-  margin-top: 20px;
+  margin-top: 145px;
   min-height: 700px;
 }
 
@@ -171,6 +100,95 @@ p > strong {
     display: block;
 }
 
+/** Heading **/
+#heading {
+    margin-top: -1px;
+    height: 125px;
+    width: 100%;
+    min-height: 125px;
+    min-width: 378px;
+    position: absolute;
+    z-index: 10;
+}
+
+#logo {
+  min-width: 415px;
+  color: white;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 2.94rem;
+}
+
+.logo-small {
+    font-size: 1.4em !important;
+    min-width: 196px !important;
+    margin-top: 40px;
+}
+
+.link-no-decoration {
+  text-decoration: none;
+  color: white;
+}
+
+.link-no-decoration:hover {
+  text-decoration: none;
+  color: white;
+}
+
+nav {
+  margin-top: 25px;
+  min-width: 645px;
+}
+
+nav a:active, nav a:visited, nav a:hover {
+  text-decoration: none !important;
+}
+
+nav li {
+    font-weight: bold;
+}
+
+.mobile-nav {
+    height: 60px !important;
+    width: 60px !important;
+    min-width: 60px !important;
+}
+
+.current_page {
+  background: #FFF;
+  color: #00A;
+  border: #00A 2px solid;
+  border-radius: 3px;
+}
+
+.current_page:hover {
+  color: #759AE7;
+}
+
+#yokine-stripe-svg {
+  position: absolute;
+  top: -20px;
+  right: 10px;
+  min-width: 124px;
+}
+
+nav .dropdown-content {
+    background-color: #0d47a1;
+}
+
+nav .dropdown-content li {
+    line-height: 0.9rem;
+}
+
+nav .dropdown-content li:hover {
+    background-color: #0d60b5;
+}
+
+nav .dropdown-content li>a {
+    font-size: 1rem;
+    font-weight: normal;
+    color: white;
+}
+
 /** Index page **/
 #welcome p {
     font-size: 16px;
@@ -222,6 +240,17 @@ p > strong {
 #media .card-content>a {
     word-break: break-all;
     overflow-wrap: break-word !important;
+}
+
+/** Beginner's Course **/
+#fact-prep {
+    margin-top: 20px;
+}
+
+#fact-prep>li {
+    margin-top: 8px;
+    margin-left: 45px;
+    list-style-type: circle;
 }
 
 /** Location **/
