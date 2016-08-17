@@ -1,0 +1,238 @@
+{% extends "base.html" %}
+<!--<head>-->
+  {% block title %}Yokine Archery >>-->{% endblock %}
+  {% block javascript%}
+  <script>
+    function windowSizeIndex() {
+    }
+
+    $( document ).ready(function() {
+        windowSizeIndex();
+    });
+
+    $( window ).resize( function() {
+        windowSizeIndex();
+    });
+  </script>
+  {% endblock %}
+<!--</head>-->
+<!--<body>-->
+  <!--<div id="page">-->
+      <!--<div id="content">-->
+        {% block content %}
+        <p class="reminder">Website is currently in development, shouldn't be too much longer!</p>
+        <div class="row">
+          <div id="shooting" class="col l8 offset-l2">
+            <h3>Shooting</h3>
+            <h4>About archery in general</h4>
+            <p>
+              Archery has a very long and profound history. Primarily, the
+              bow and arrow was used for hunting due to it's effectiveness in
+              accuracy and stealth over long distances. It was also used very
+              successfully throughout history in warfare up until firearms became
+              prominent during the 16th century. Archery was revived recreationally
+              during the 18th century as a competitive sport while many people still
+              choose to use them for hunting purposes. Archery also remains as an
+              Olympic sport in the form of recurve archery (discussed below).
+            </p>
+            <br>
+            <p>
+              More information can be found on the
+              <a href="https://worldarchery.org/Archery">World Archery website</a>
+            </p>
+            <div class="card-panel blue-grey lighten-4" style="margin-top:40px">
+              <h4>Types of bows</h4>
+              <div class="row" id="bow-type">
+                <div class="card col l5 m9 s10">
+                  <div class="card-image">
+                    <img class="activator" alt="Recurve Risers" src="{{url_for('static', filename='shibuya.jpg')}}">
+                    <span class="card-title activator">Recurve</span>
+                    <a href="#!"><i class="material-icons activator right">subject</i></a>
+                  </div>
+                  <div class="card-content">
+                    <p class="activator">
+                      The recurve bow is today's modern competition bow and is what
+                      you will find being used currently...
+                    </p>
+                  </div>
+                  <div class="card-reveal">
+                    <span class="card-title activator grey-text text-darken-4">
+                        Recurve
+                        <i class="material-icons right">close</i>
+                    </span>
+                    <div style="margin-top: 15px;padding-right: 25px">
+                      <p>
+                        The recurve bow can be seen as an iteration of the traditional
+                        longbow. It gets its name from the way the bow's limbs bend toward
+                        the archer and then recurve away at the tips. This second curve
+                        gives an extra "flick" to the arrow as it leaves the bow.
+                        The modern recurve competition bow is what you will find being
+                        used currently in the Olympic archery format.
+                        A modern recurve competition bow consists of a riser (handle),
+                        limbs, string, sight and stabilisers.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card col l5 m9 s10">
+                  <div class="card-image">
+                    <img class="activator" alt="Compound Bow" src="{{url_for('static', filename='compound.jpg')}}">
+                    <span class="card-title activator">Compound</span>
+                    <a href="#!"><i class="material-icons activator right">subject</i></a>
+                  </div>
+                  <div class="card-content">
+                    <p>Compound bows are seen as the most advanced type of bow technologically
+                      and are easily distinguished...</p>
+                  </div>
+                  <div class="card-reveal">
+                    <span class="card-title activator grey-text text-darken-4">
+                        Compound
+                        <i class="material-icons right">close</i>
+                    </span>
+                    <div style="margin-top: 15px;padding-right: 25px">
+                      <p>
+                        Compound bows are the most advanced type of bow technologically
+                        and are easily distinguished by the cam/pulley system located
+                        on the limbs of the bow. The cams allow for an initially higher
+                        draw weight that eases off as you draw the bow back. Compound
+                        bows are ideal for hunting as the bows themselves are smaller,
+                        can be held at full draw for longer and are able to fling the
+                        arrows out faster than a traditional bow would. The compound
+                        target scene is growing larger and larger with requests that
+                        it should be seen along side the recurve bow at the Olympic games.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card col l5 m9 s10">
+                  <div class="card-content">
+                    <span class="card-title">Longbow</span>
+                    <p>about longbows</p>
+                  </div>
+                </div>
+              </div>
+              <p>
+                There are many types of bows from many different cultures. The
+                ones mentioned above are the types of bows you will likely find
+                at Yokine archery club and many other archery clubs affiliated
+                with Archery Australia.
+              </p>
+            </div>
+            <h4>Types of competition</h4>
+            <p>
+              At Yokine, we tend to focus on <b>Target</b> archery but also participate
+              in the likes of <b>Field</b> and <b>Clout</b>.
+            </p>
+            <br>
+            <div class="row">
+              <div class="col l7 m8 s12">
+                <p style="margin-top: 10px">
+                  <b>Target</b> archery refers to stationary targets with a target face consisting
+                  of 10 scoring zones. Depending on your age, gender and bow classification
+                  there are many different types of shoots an archer can participate in.
+                  Yokine Archery tend to focus more on the shoots that you would find
+                  in competitive events such as local, national and international
+                  tournaments. These tend to be 144, 90 or 72 arrows in length. We score
+                  every 6 arrows; this is referred to as an 'end'. We also tend to group
+                  different distance scores between 5-6 ends or 30-36 arrows depending
+                  on which shoot you are scoring. One popular shoot you will see with
+                  recurve archery is the WA70/720 shoot (World Archery/70m/720 maximum points),
+                  also known as a ranking round, which is shot at the Olympics to rank
+                  archers before individual matchplay.
+                </p>
+                <br>
+              </div>
+              <div class="col l5 m4 s12">
+                <div class="centerwrapper">
+                  <img class="responsive-img" style="border-radius: 5px"
+                    alt="Target grouping at 30m" src="{{url_for('static', filename='30group2.JPG')}}">
+                  <br>
+                  <p>
+                    More information on Target archery you can check it out at
+                      <a href="http://www.archery.org.au/About-Archery/Events-and-Activities/Target-Archery">
+                        Archery Australia's website.
+                      </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <p>
+              <b>Matchplay</b> is an important discipline that is now a major part
+              of target archery shooting. It is one of, if not the most recent
+              competitive shooting formats that World Archery has brought out internationally.
+              This format, combined with a ranking round, is what recurve archers
+              compete in at the Olympic games. It consists of individual (1v1),
+              mixed pairs (2v2) or team (3v3) categories. They are all scored the
+              same way but the number of arrows shot and time allowed to shoot change
+              per category. The main idea stems from the individual category where
+              two archers compete head to head in a set based system (similar to tennis).
+              Each archer shoots 3 arrow ends where the maximum score each end is
+              30 points. The archer with the higher end score is awarded 2 set points.
+              The archer with the lower score gets 0 set points for the end. If
+              the end is a draw, each archer is awarded 1 set point each. The winner
+              is decided once one of the archers has 6 or more set points. If both
+              archers end up on 5 set points each, a 1 arrow shoot-off is used to
+              decide the tie. Matchplay in the open division (and Olympics) is always
+              shot at 70m.
+            </p>
+            <br>
+            <br>
+            <div class="row">
+              <div class="col l7 m8 s12">
+                <p>
+                  In <b>Field</b> archery there are typically 24-48 different targets.
+                  24 targets is one round and two rounds can be scored be repeating
+                  same target setup or using a different set of 24 targets. The targets
+                  are set up in fairly unique locations such as fields, forest or bushland
+                  and sometimes urban environments. Targets will be set up between 5m
+                  and 60m (age/class dependent) in 5m increments. There are 4 different
+                  size faces that can be used depending on the distance of the target
+                  and a certain distance may use more than one different sized target
+                  face. Only three arrows are to be shot by each archer at each target
+                  and target values range from 1-6 points. Field archery faces also
+                  look strikingly different from normal target faces in that the values
+                  1-4 are all black in colour and the 5-6 rings are gold. Field shooting
+                  also comes in two flavours; marked and unmarked. Marked field will
+                  tell you how far away each target is (within 1-2 metres) whereas
+                  Unmarked shooting you have to make your own judgement of the target's
+                  distance.
+                </p>
+              </div>
+              <div class="col l5 m6 s12">
+                <div class="centerwrapper">
+                  <img class="responsive-img" style="border-radius: 5px"
+                    alt="Western Dragon Field course" src="{{url_for('static', filename="field.jpg")}}">
+                </div>
+                <p>
+                  You can learn more about
+                  <a href="http://www.archery.org.au/About-Archery/Events-and-Activities/Field-Archery">
+                    Field Archery</a> from Archery Australia
+                </p>
+              </div>
+            </div>
+            <br>
+            <p>
+              The <b>Clout</b> discipline is quite different to the other formats
+              and its origins come from wartime archery where arrows would be shot
+              up towards the sky and lobbed at a large target area on the ground.
+              Distances range between 100-180m depending on age and bow type and
+              flags spaced out horizontally are used to indicate the scoring zones.
+              The middle is indicated by an upside down triangle shape known as the
+              clout. Scoring zones in Australian Clout  are similar to that of target
+              shooting (1-10). Other countries may use a different system.
+            </p>
+            <h4>Training</h4>
+            <p>
+              At Yokine members typically train 4 days a week; Saturday, Sunday,
+              Tuesday and Thursday. Casual and social archers tend to shoot 1-2
+              days a week. International archers will ideally be wanting to shoot
+              5-6 days a week while also doing work at the gym. These archers will
+              likely also be shooting 150+ arrows each day and between 200-300 on
+              weekends.
+            </p>
+          </div>
+        </div>
+        {% endblock %}
+      <!--</div>-->
+  <!--</div>-->
+<!--</body>-->

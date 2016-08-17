@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+<!--<head>-->
+  {% block title %}Yokine Archery >>-->{% endblock %}
+  {% block javascript%}
+  <script>
+    function windowSizeIndex() {
+    }
+
+    $( document ).ready(function() {
+        windowSizeIndex();
+    });
+
+    $( window ).resize( function() {
+        windowSizeIndex();
+    });
+  </script>
+  {% endblock %}
+<!--</head>-->
+<!--<body>-->
+  <!--<div id="page">-->
+      <!--<div id="content">-->
+        {% block content %}
+        <div class="row">
+          <div class="col offset-l2 l8">
+            <h3>Calendar</h3>
+            <p>Below is a run down of the upcoming events in the next few months.</p>
+            <br>
+            <p>
+              The link for AWAs full Calendar year can be found
+                <a href="http://archerywa.com.au/wordpress/wp-content/uploads/2015/03/7-AWA-2016-Calendar-V7-22.06.16.pdf">here</a>
+              as a pdf.
+            </p>
+            <table class="striped">
+              <thead>
+                <tr>
+                  <th data-field="title">Title</th>
+                  <th data-field="date">Date</th>
+                  <th data-field="location">Location</th>
+                  <th data-field="details">Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Baldivis Breakfast Shoot</td>
+                  <td>21st August</td>
+                  <td>Baldivis Archery Club, Ennis Avenue, Rockingham</td>
+                  <td>
+                    <a href="http://archerywa.com.au/wordpress/wp-content/uploads/2015/03/Baldivis-Archery-Club-Breakfast-Field-2016-Flyer.docx_1470578226284.pdf">Flyer</a>
+                    <br>
+                    <a href="http://archerywa.com.au/wordpress/wp-content/uploads/2015/03/Baldivis-2016-Breakfast-Field-Entry.docx_1470578266466.pdf">Entry</a></td>
+                </tr>
+                <tr>
+                  <td>Sticke and String</td>
+                  <td>28th August</td>
+                  <td>Bowmen of Melville, Beasley Road, Leeming</td>
+                  <td><a href="http://archerywa.com.au/wordpress/wp-content/uploads/2015/03/Sticke-and-Stringe-2016.pdf">Flyer and Entry</a></td>
+                </tr>
+                <tr>
+                  <td>Western Dragon Field Shoot</td>
+                  <td>25-26th September</td>
+                  <td>Greenhills, Western Australia</td>
+                  <td>
+                    <a href="http://www.westerndragon.com.au/">Entry</a><br>
+                    <a href="http://archerywa.com.au/wordpress/wp-content/uploads/2015/03/WDFC-2016-SECRETARY.doc_1470578096798.pdf">Additional Info</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>WA State Target Championships</td>
+                  <td>18 September</td>
+                  <td>Archery Center, Whiteman Park</td>
+                  <td><a href="http://archerywa.com.au/wordpress/wp-content/uploads/2015/03/StateTargetEntryForm.pdf">Entry</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        {% endblock %}
+      <!--</div>-->
+  <!--</div>-->
+<!--</body>-->

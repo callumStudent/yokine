@@ -5,7 +5,7 @@
 html, body {
   width: 100%;
   height: 100%;
-  overflow: auto;
+  overflow: initial;
 }
 
 #page-wrap {
@@ -14,15 +14,19 @@ html, body {
   width: inherit;
   min-height: 92%;
   margin-bottom: 30px;
-  overflow: auto;
 }
 
 #content {
   margin-left: auto;
   margin-right: auto;
   width: 85%;
-  margin-top: 145px;
+  /**margin-top: 145px;**/
+  margin-top: 45px;
   min-height: 700px;
+}
+
+.content-sm {
+    margin-top: 0 !important;
 }
 
 #welcome {
@@ -103,19 +107,31 @@ p > strong {
 /** Heading **/
 #heading {
     margin-top: -1px;
-    height: 125px;
+    height: 105px;
     width: 100%;
-    min-height: 125px;
+    min-height: 105px;
     min-width: 378px;
-    position: absolute;
+    /**position: absolute;**/
     z-index: 10;
 }
 
+.heading-sm {
+    position: initial !important;
+}
+
 #logo {
+  margin-top: 10px !important;
   min-width: 415px;
   color: white;
   font-family: Tahoma, Geneva, sans-serif;
   font-size: 2.94rem;
+}
+
+#logo2 {
+  margin-top: 10px !important;
+  margin-left: 8%;
+  width: 225px;
+  border-radius: 10px;
 }
 
 .logo-small {
@@ -135,7 +151,7 @@ p > strong {
 }
 
 nav {
-  margin-top: 25px;
+  margin-top: 5px;
   min-width: 645px;
 }
 
@@ -242,7 +258,41 @@ nav .dropdown-content li>a {
     overflow-wrap: break-word !important;
 }
 
+/** Shooting **/
+#shooting h4 {
+    margin-top: 50px;
+}
+
+#shooting .card-panel>h4 {
+    margin-top: 0;
+}
+
+#bow-type {
+    margin-left: 5%;
+}
+
+#bow-type .card {
+    padding: 0 5px;
+    margin: 10px 20px;
+}
+
+#bow-type img {
+    margin-top: 4px;
+}
+
 /** Beginner's Course **/
+.stage h5 {
+  display: inline-block;
+}
+
+.stage b {
+  margin-left: 20px;
+}
+
+.stage p {
+  padding: 10px 10px 20px 10px !important;
+}
+
 #fact-prep {
     margin-top: 20px;
 }

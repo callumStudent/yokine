@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+<!--<head>-->
+  {% block title %}Yokine Archery >>-->{% endblock %}
+  {% block javascript%}
+  <script>
+    function windowSizeIndex() {
+    }
+
+    $( document ).ready(function() {
+        windowSizeIndex();
+    });
+
+    $( window ).resize( function() {
+        windowSizeIndex();
+    });
+  </script>
+  {% endblock %}
+<!--</head>-->
+<!--<body>-->
+  <!--<div id="page">-->
+      <!--<div id="content">-->
+        {% block content %}
+        <div class="row">
+          <div>
+            <h3>Members</h3>
+          </div>
+        </div>
+        {% endblock %}
+      <!--</div>-->
+  <!--</div>-->
+<!--</body>-->

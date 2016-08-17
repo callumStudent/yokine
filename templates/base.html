@@ -15,6 +15,8 @@
   <script src="{{url_for('static', filename='js/jquery-2.1.4.min.js')}}"></script><!--jQuery-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script><!--Materialize-->
 
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
   <script>
     function windowSize() {
         if( $( window ).width() <= 1218) {
@@ -34,8 +36,12 @@
 
       if( $( window ).width() < 720) {
         $( '#yokine-stripe' ).addClass('hide');
+        $( '#heading' ).addClass('heading-sm');
+        $( '#content' ).addClass('content-sm');
       } else {
         $( '#yokine-stripe' ).removeClass('hide');
+        $( '#heading' ).removeClass('heading-sm');
+        $( '#content' ).removeClass('content-sm');
       }
 
       if( $( window ).width() <= 565) {
@@ -46,13 +52,9 @@
     };
 
     $(document).ready(function () {
-      $(' nav>ul>li ').removeClass('active');
-      $(' nav>ul>li a ').each(function() {
-        if ($(this).attr('name') == location.href.split("/").slice(-1)){ $(this).addClass('current_page'); }
-      });
-
-      $(' .button-collapse ').sideNav();  /* Initialise side-nav */
-      windowSize();                     /* Initialise windowSize */
+      $(' .button-collapse ').sideNav();    /* Initialise side-nav */
+      $(' .collapsible ').collapsible();      /* Initialise collapsible */
+      windowSize();                         /* Initialise windowSize */
     });
 
     $( window ).resize( function() {
@@ -64,21 +66,60 @@
 </head>
 <body>
   <div id="page-wrap">
+
+    <!-- Slide out navigation -->
+    <ul id="slide-out" class="side-nav">
+      <li><a name="home" href="{{url_for('index')}}">Home</a></li>
+      <li><a name="news" href="{{url_for('news')}}">News</a></li>
+      <li class="no-padding">
+        <ul class="collapsible" data-collapsible="accordion">
+          <li>
+            <a href="#!" class="collapsible-header" style="line-height: 64px">Shooting &#9660;</a>
+            <div class="collapsible-body">
+              <ul>
+                <li><a href="{{url_for('shooting')}}">About Shooting</a></li>
+                <li><a href="{{url_for('beginners')}}">Beginner's Course</a></li>
+                <li><a href="{{url_for('members')}}">Members</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li><a name="calendar" href="{{url_for('calendar')}}">Calendar</a></li>
+      <li><a name="gallery" href="{{url_for('gallery')}}">Gallery</a></li>
+      <li><a name="location" href="{{url_for('location')}}">Location</a></li>
+      <li><a name="contact" href="{{url_for('contact')}}">About/Contact</a></li>
+      <li>
+        <a name="facebook" href="https://www.facebook.com/YokineArcheryClub/">
+          <span class="fb-icon fb-blue" role="img" aria-label="facebook"></span>
+        </a>
+      </li>
+    </ul>
+    <ul id="shooting-dropdown" class="dropdown-content">
+      <li><a href="{{url_for('shooting')}}">About Shooting</a></li>
+      <li><a href="{{url_for('beginners')}}">Beginner's Course</a></li>
+      <li><a href="{{url_for('members')}}">Members</a></li>
+    </ul>
+
     <div id="heading" class="card-panel blue darken-4 z-depth-2 row" style="max-height: 136px;">
-      <h2 id="logo" class="col l3"><a class="link-no-decoration" href="{{url_for('index')}}">Yokine Archery Club</a></h2>
+      <div class="col l3">
+        <a class="link-no-decoration" href="{{url_for('index')}}">
+          <img id="logo2" alt="YAC" src="{{url_for('static', filename='YAC.png')}}">
+        </a>
+      </div>
       <nav class="col l5 blue darken-3" role="navigation" style="margin-left: 20px">
         <div class="nav-wrapper">
           <ul class="left hide-on-med-and-down">
             <li><a name="news" href="{{url_for('news')}}">News</a></li>
             <li>
-              <a name="shooting" href="" class="dropdown-button"
+              <a name="shooting" href="#!" class="dropdown-button"
                 data-hover="true"
                 data-beloworigin="true"
                 data-activates="shooting-dropdown">
                   Shooting &#9660;
               </a>
             </li>
-            <li><a name="calendar" href="">Calendar</a></li>
+            <li><a name="calendar" href="{{url_for('calendar')}}">Calendar</a></li>
             <li><a name="gallery" href="{{url_for('gallery')}}">Gallery</a></li>
             <li><a name="location" href="{{url_for('location')}}">Location</a></li>
             <li><a name="contact" href="{{url_for('contact')}}">About/Contact</a></li>
@@ -88,30 +129,11 @@
               </a>
             </li>
           </ul>
-          <ul id="shooting-dropdown" class="dropdown-content">
-            <li><a href="#!">About Shooting</a></li>
-            <li><a href="{{url_for('beginners')}}">Beginner's Course</a></li>
-            <li><a href="#!">Members</a></li>
-          </ul>
-          <ul id="slide-out" class="side-nav">
-            <li><a name="home" href="{{url_for('index')}}">Home</a></li>
-            <li><a name="news" href="{{url_for('news')}}">News</a></li>
-            <li><a name="shooting" href="{{url_for('beginners')}}">Shooting</a></li>
-            <li><a name="calendar" href="">Calendar</a></li>
-            <li><a name="gallery" href="{{url_for('gallery')}}">Gallery</a></li>
-            <li><a name="location" href="{{url_for('location')}}">Location</a></li>
-            <li><a name="contact" href="{{url_for('contact')}}">About/Contact</a></li>
-            <li>
-              <a name="facebook" href="https://www.facebook.com/YokineArcheryClub/">
-                <span class="fb-icon fb-blue" role="img" aria-label="facebook"></span>
-              </a>
-            </li>
-          </ul>
           <a id="mobile" href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
         </div>
       </nav>
       <div id="yokine-stripe" class="col l1 right" style="position: relative">
-        <svg id="yokine-stripe-svg" height="124" width="180px">
+        <svg id="yokine-stripe-svg" height="104" width="180px">
             <line x1="20" y1="115%" x2="130" y2="-15%" style="stroke:rgb(255,255,255);stroke-width:30;" />
             <line x1="58" y1="115%" x2="168" y2="-15%" style="stroke:rgb(255,0,0);stroke-width:30;" />
             Sorry, your browser does not support inline SVG.

@@ -21,9 +21,21 @@ def index():
 def news():
     return render_template('news.html')
 
+@app.route('/shooting')
+def shooting():
+    return render_template('shooting.html')
+
 @app.route('/beginners')
 def beginners():
     return render_template('beginners.html')
+
+@app.route('/members')
+def members():
+    return render_template('members.html')
+
+@app.route('/calendar')
+def calendar():
+    return render_template('calendar.html')
 
 @app.route('/gallery')
 def gallery():
