@@ -79,7 +79,7 @@
               <ul>
                 <li><a href="{{url_for('shooting')}}">About Shooting</a></li>
                 <li><a href="{{url_for('beginners')}}">Beginner's Course</a></li>
-                <li><a href="{{url_for('members')}}">Members</a></li>
+                <li><a href="{{url_for('loginview.index')}}">Members</a></li>
               </ul>
             </div>
           </li>
@@ -89,6 +89,19 @@
       <li><a name="gallery" href="{{url_for('gallery')}}">Gallery</a></li>
       <li><a name="location" href="{{url_for('location')}}">Location</a></li>
       <li><a name="contact" href="{{url_for('contact')}}">About/Contact</a></li>
+      <li class="no-padding">
+        <ul class="collapsible" data-collapsible="accordion">
+          <li>
+            <a href="#!" class="collapsible-header" style="line-height: 64px">Contact/Info &#9660;</a>
+            <div class="collapsible-body">
+              <ul>
+                <li><a href="{{url_for('contact')}}">About/Contact</a></li>
+                <li><a href="{{url_for('documents')}}">Documents</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li>
       <li>
         <a name="facebook" href="https://www.facebook.com/YokineArcheryClub/">
           <span class="fb-icon fb-blue" role="img" aria-label="facebook"></span>
@@ -98,7 +111,11 @@
     <ul id="shooting-dropdown" class="dropdown-content">
       <li><a href="{{url_for('shooting')}}">About Shooting</a></li>
       <li><a href="{{url_for('beginners')}}">Beginner's Course</a></li>
-      <li><a href="{{url_for('members')}}">Members</a></li>
+      <li><a href="{{url_for('loginview.index')}}">Members</a></li>
+    </ul>
+    <ul id="contact-dropdown" class="dropdown-content">
+      <li><a href="{{url_for('contact')}}">About/Contact</a></li>
+      <li><a href="{{url_for('documents')}}">Documents</a></li>
     </ul>
 
     <div id="heading" class="card-panel blue darken-4 z-depth-2 row" style="max-height: 136px;">
@@ -122,7 +139,14 @@
             <li><a name="calendar" href="{{url_for('calendar')}}">Calendar</a></li>
             <li><a name="gallery" href="{{url_for('gallery')}}">Gallery</a></li>
             <li><a name="location" href="{{url_for('location')}}">Location</a></li>
-            <li><a name="contact" href="{{url_for('contact')}}">About/Contact</a></li>
+            <li>
+              <a name="contact" href="#!" class="dropdown-button"
+                data-hover="true"
+                data-beloworigin="true"
+                data-activates="contact-dropdown">
+                  Contact/Info &#9660;
+              </a>
+            </li>
             <li>
               <a name="facebook" href="https://www.facebook.com/YokineArcheryClub/">
                 <span class="fb-icon fb-white" role="img" aria-label="facebook"></span>

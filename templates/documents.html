@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+<!--<head>-->
+  {% block title %}Documents >--> Yokine Archery{% endblock %}
+  {% block javascript %}
+  {% endblock %}
+<!--</head>-->
+<!--<body>-->
+  <!--<div id="page">-->
+    <!--<div id="container">-->
+      <!--<div id="content">-->
+        {% block content %}
+        <div class="row">
+          <div class="col offset-l3">
+            <h3>Club Documents</h3>
+            <p>Here is a list of useful club documents.</p>
+            <br>
+            <ul>
+              <li>
+                <a href="{{url_for('static', filename='docs/membersVisitorsYAC.pdf')}}">Membership and Visitor Policies</a> (PDF)
+              </li>
+              <li>
+                <a href="{{url_for('static', filename='docs/constitutionYAC.pdf')}}">Yokine Archery Club Constitution</a> (PDF)
+              </li>
+              <li>
+                <a href="{{url_for('static', filename='docs/inductionManualYAC.pdf')}}">Athlete Induction Manual</a> (PDF)
+              </li>
+              <li>
+                <a href="{{url_for('static', filename='docs/competitionGuideYAC.pdf')}}">Guide to Archery Competition Events</a> (PDF)
+              </li>
+            </ul>
+          </div>
+        </div>
+        {% endblock %}
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</body>-->

@@ -69,12 +69,14 @@
           </div>
           <div class="col l4 space"></div>
         </div>
-        <div id="news"class="card-panel blue-grey lighten-5 z-depth-2">
+        <!--<div id="news"class="card-panel blue-grey lighten-5 z-depth-2">
             <div class="card-content">
                 <h2 class="card-title grey-text text-darken-3">Latest News</h2>
-                <p>News items will appear here</p>
+                {% for item in news %}
+                <p>{{ "%s - %s" % (item.date,item.title) }}</p>
+                {% endfor %}
             </div>
-        </div>
+        </div>-->
         {% endblock %}
       <!--</div>-->
   <!--</div>-->

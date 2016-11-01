@@ -1,3 +1,9 @@
 Flask
 Flask-Script
 Flask-Mail
+flask-sqlalchemy
+SQLAlchemy
+mysql-python
+flask-migrate
+flask_admin
+flask-security

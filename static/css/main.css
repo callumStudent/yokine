@@ -152,7 +152,7 @@ p > strong {
 
 nav {
   margin-top: 5px;
-  min-width: 645px;
+  min-width: 650px;
 }
 
 nav a:active, nav a:visited, nav a:hover {
@@ -303,6 +303,29 @@ nav .dropdown-content li>a {
     list-style-type: circle;
 }
 
+/** Members **/
+#login {
+    background-color: #F9F9F9;
+    border-radius: 10px;
+    margin: 10px;
+    padding-bottom: 30px;
+}
+
+#login>h3 {
+    margin-left: 15%;
+    padding: 30px 0;
+}
+
+#login-form label {
+    color: #0000BB;
+}
+
+#login-form input[type="checkbox"] {
+    visibility: visible;
+    position: relative !important;
+    left: 5px !important;
+}
+
 /** Location **/
 .map-sm {
     height:305px;width:275px;
@@ -322,6 +345,16 @@ nav .dropdown-content li>a {
     margin-top: 10px !important;
 }
 
+#contact-about {
+    padding: 10px;
+    border: 2px solid #AAA;
+    border-radius: 3px;
+}
+
 #form-age {
     margin-bottom: 60px;
+}
+
+.form-title {
+    font-size: 1.4rem;
 }

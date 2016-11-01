@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 <!--<head>-->
-  {% block title %}Location >--> Yokine Archery{% endblock %}
+  {% block title %}Contact >--> Yokine Archery{% endblock %}
   {% block javascript %}
   <script>
     $(document).ready( function() {
       $('select').material_select(); /* Initialise Select fields */
 
-      $("select[name='about']").change(function() {
+      $("select[name='about']").change(function() { /* Different Enquiry */
         var value = $(this).val();
         if(value == 1) {
           $("#form-size").addClass("hide");
@@ -20,6 +20,17 @@
           $("#form-label-info").text("Additional Information");
         }
       })
+
+      $("#contact-form").submit(function(e) {
+        if($("select[name='about']").val() > 1 && !($("#age").prop("checked"))) {
+          $("html body").animate({
+            scrollTop: $("#age").offset().top
+          }, 1000)
+          Materialize.toast("Make sure everyone is above the age of 10", 4000);
+          e.preventDefault();
+        }
+        Materialize.toast("Your message sent successfully!");
+      });
     });
   </script>
   {% endblock %}
@@ -76,19 +87,19 @@
               You can also contact us via the following form:
             </p>
 
-            <form id="contact-form" name="contact" method="POST" action="">
-              <div class="row">
+            <form id="contact-form" name="contact" method="POST" action="/submit">
+              <div id="contact-about" class="row">
                 <div class="input-field col s12">
                   <select name="about">
                     <option value="1" selected>General Enquiry</option>
                     <option value="2">Come&Try</option>
                     <option value="3">Beginner's course</option>
                   </select>
-                  <label>Contacting about:</label>
+                  <label style="font-size: 1.55rem;top: -20px">Contacting about:</label>
                 </div>
               </div>
               <div class="row">
-                  <h4 name="form-name">Contact Details</h4>
+                  <h4 name="form-name" class="form-title">Contact Details</h4>
               </div>
               <div class="row">
                 <div class="input-field">
@@ -123,12 +134,12 @@
               </div>
               <div id="form-age" class="row hide">
                 <div class="input-field" style="float: right;padding-right: 10px">
-                  <input type="checkbox" id="age" value="yes">
+                  <input type="checkbox" id="age" name="age" value="yes">
                   <label for="age">Is everyone above 10 years of age?</label>
                 </div>
               </div>
               <div class="row">
-                <h4 id="form-label-info">Enquiry Details</h4>
+                <h4 id="form-label-info" class="form-title">Enquiry Details</h4>
               </div>
               <div id="form-help" class="row hide">
                 <div class="input-field">
